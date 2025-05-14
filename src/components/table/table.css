@@ -1,0 +1,41 @@
+/* TABLE TO CARD */
+.new-card-table :is(table,
+  tbody,
+  tr,
+  th,
+  td) {
+  @apply block
+}
+
+.card:has(.new-card-table ) .inner{
+  @apply bg-transparent p-0 px-4 rounded-none
+}
+.table-card .inner {
+  @apply bg-transparent p-0 px-4 rounded-none
+}
+
+.table-wrapper {}
+
+.new-card-table.table-wrapper table thead {
+  @apply hidden
+}
+
+.new-card-table.table-wrapper tbody {
+  @apply grid grid-cols-3 gap-4
+}
+
+.new-card-table.table-wrapper tbody tr {
+  @apply bg-white p-5 rounded-xl shadow-xl
+}
+
+.new-card-table.table-wrapper tbody tr td {
+  @apply py-2 px-0 w-full !right-0 !relative border-b border-solid border-gray-200 font-medium text-black bg-transparent flex justify-between text-right
+}
+
+.new-card-table.table-wrapper tbody tr td::before {
+  @apply content-[attr(data-text)] block text-black50 mb-1 w-1/2 text-left
+}
+
+.new-card-table .table-card .inner .min-w-\[400px\] {
+  @apply min-w-[unset];
+}
